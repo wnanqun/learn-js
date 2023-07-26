@@ -1,0 +1,54 @@
+
+<!-- 
+    字面量   --接近常量
+    变量
+    操作符
+    关键字
+    数据类型:  数字，字符串，数组[]，对象{}  都用 var 定义
+    区分字母大小写:函数 getElementById 与 getElementbyID 是不同的
+    在 JavaScript 中，用分号来结束语句是可选的
+    在 JavaScript中，几乎所有的事物都是对, 对象可以包含多个值（多个变量），每个值以 name:value 对呈现
+    对象属性访问: 
+     对于变量   person.lastName;   或者   person["lastName"];  
+     对于函数   不加括号输出函数表达式(直接把整个函数作为字符串输出返回)   加括号输出函数执行结果
+        对象中方法的创建跟变量一样(跟函数的不太一样) methodName : function(){} , 访问也跟变量一样  
+    作用域:
+    1. 在 JavaScript 函数内部声明的变量（使用 var）是局部变量，所以只能在函数内部访问它
+    2. 在函数外声明的变量是全局变量，网页上的所有脚本和函数都能访问它
+    3. 如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性
+        非严格模式下给未声明变量赋值创建的全局变量，是全局对象的可配置属性，可以删除
+ -->
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo" >第一个段落    </p>
+    
+    <button onclick="myFunction()" >点击</button>
+    <script>
+        // 不用分号
+        function myFunction()
+        {
+            a=2
+            b=3
+            debugger;
+            window.alert("Hello World!")  // 警告框显示数据
+            window.alert("你好，世界") //--一样的效果，不过因为是第二次，所以会多出一个以后拒绝的选项
+            document.getElementById("demo").innerHTML=a+b
+        }
+    </script>
+
+    <script>
+        var person={
+            firstname: "John",
+            lastname: "Doe",
+            age: 50,
+            methodName: function(){
+                a=1;
+                b=3;
+                c=a+b;
+                return c;
+            }
+        }
+    </script>
+</body>
+</html>

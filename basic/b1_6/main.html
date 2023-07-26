@@ -1,0 +1,30 @@
+
+<!-- 表单误区
+    <form> 标签用于为用户输入创建 HTML 表单,能够包含 input 元素，比如文本字段、复选框、单选框、提交按钮等等
+    表单还可以包含 menus、textarea、fieldset、legend 和 label 元素。
+    表单用于向服务器传输数据
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>    </head>
+        <script>
+            function validForm(){
+                var x=document.forms["myForm"]["fname"].value;
+                if(x == null || x== ""){
+                    alert("未输入名字");
+                    return false;
+                }
+            }
+        </script>
+    <body>
+        <form name="myForm" action="https://www.runoob.com/try/demo_source/demo_form.php"
+        onsubmit="return validForm()" method="post">
+    名字: 
+    <input type="text" name="fname" required="required" >
+    <!--required="required" 可以让浏览器自动检验是否填充-->
+    <input type="submit" value="提交">      
+    </form>
+    </body>
+</html>

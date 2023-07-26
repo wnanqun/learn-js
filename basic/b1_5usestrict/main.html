@@ -1,0 +1,37 @@
+<!-- 
+    严格模式(use strict) 它不是一条语句，但是是一个字面量表达式
+    JavaScript 旧版本中会被忽略
+ -->
+<!DOCTYPE html>
+<html>
+    <title></title>
+    <body>
+        <h1>使用"use strict"</h1>
+        <h3>不允许使用未定义的变量</h3>
+        <script>
+            "use strict";
+             x=3.14;
+            alert("问题");//此处不会再被执行
+        </script>
+        <script>
+            // 在函数内部声明是局部作用域 (只在函数内使用严格模式):
+            x= 3.14;
+            myFuntion();//调用
+            function myFuntion(){
+                "use strict";
+                y=3.14;
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

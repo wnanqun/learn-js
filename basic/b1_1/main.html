@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <head> 中的 JavaScript 函数 -->
+        <script>
+            function myFunction()
+            {
+                document.getElementById("demo").innerHTML="我的第一个 JavaScript函数";
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>这是一个标题</h1>");
+            document.write("<p>这是一段落</p>");
+        </script>
+        <h1>我的第一个web 页面</h1>
+
+        <p id="demo">一个段落</p>
+        <!-- 设置按钮 点击使用函数,会将上面id="demo"的段落的文字进行替换-->
+        <button type="button" onclick="myFunction()">尝试一下</button>
+        <p id="demo" >只能在第一个符合函数条件的地方进行使用</p>
+        <button type="button" onclick="myFunction()">尝试一下</button>
+
+    </body>
+</html>

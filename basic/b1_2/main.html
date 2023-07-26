@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h1>我的 Web 页面</h1>
+        <p id="demo">一个段落</p>
+        <button type="button" onclick="myFunction()">尝试一下</button>
+        <script>
+            // body中的javascript函数,可以先定义,也可以后定义
+               function myFunction()
+                {
+                    document.getElementById("demo").innerHTML="我的第一个 javaScript 函数";
+                }
+        </script>        
+        <!-- 外部的javascript函数 通过src 进行引用 -->
+        <script src="myScript.js"></script>
+        <p id="demo2">另一个段落</p>
+        <button type="button" onclick="myFunction2()">尝试一下</button>
+    </body>
+</html>
